@@ -1,0 +1,91 @@
+/* Smooth Gradient Background Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc, #ff5733, #ffcc00);
+    background-size: 300% 300%;
+    animation: gradientAnimation 8s infinite alternate;
+    color: white;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Glassmorphism Effect for Result Box */
+.result-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Score Display */
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#score {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(45deg, #ffcc00, #ff5733);
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff5733, #ffcc00);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .result-container {
+        width: 85%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
